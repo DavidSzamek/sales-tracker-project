@@ -5,8 +5,11 @@ import { color, shape } from '../styles';
 
 import styled from 'styled-components';
 
+import Img from '../assets/logo2.png';
+
 const Header = styled.header`
 	// padding: 20px;
+	background-color: ${color.primary};
 `;
 
 const StyledNav = styled.nav`
@@ -35,7 +38,8 @@ const NavigationItem = styled.li`
 	}
 
 	&:hover {
-		background: ${color.backgroundLight};
+		background: ${color.backgroundMedium};
+		border-radius: 10px;
 	}
 `;
 

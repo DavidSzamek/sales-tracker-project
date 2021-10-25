@@ -15,6 +15,8 @@ import Signup from './pages/Signup';
 import Nav from './components/Nav';
 import { StoreProvider } from './state/GlobalState';
 
+
+
 const httpLink = createHttpLink({
   uri: '/graphql',
 });
@@ -46,6 +48,7 @@ function App() {
             <Route exact path="/signup" component={Signup} />
             <Route component={NoMatch} />
           </Switch>
+
         </StoreProvider>
       </Router>
     </ApolloProvider>

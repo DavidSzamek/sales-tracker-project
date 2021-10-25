@@ -6,6 +6,7 @@ const StyledContainer = styled.div`
 	background: ${color.backgroundLight};
 	border-top: 1px solid;
 	font-size: 1.4rem;
+	
 
 	${props => `
 		text-align: ${props.alignContent};
