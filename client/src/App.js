@@ -13,6 +13,7 @@ import NoMatch from './pages/NoMatch';
 import Login from './pages/Login';
 import Signup from './pages/Signup';
 import Nav from './components/Nav';
+import Dashboard from './pages/Dashboard';
 import { StoreProvider } from './state/GlobalState';
 
 
@@ -46,6 +47,7 @@ function App() {
             <Route exact path="/" component={Home} />
             <Route exact path="/login" component={Login} />
             <Route exact path="/signup" component={Signup} />
+            <Route exact path="/dashboard" component={Dashboard} />
             <Route component={NoMatch} />
           </Switch>
 

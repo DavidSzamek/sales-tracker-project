@@ -6,15 +6,6 @@ import BkImg from '../assets/background.png'
 import { Container } from "../components/Container";
 import { H2 } from '../components/Text';
 
-
-const HomeContent = props => <StyledContent/>
-const HomeLeft = props => <StyledLeft/>
-const HomeTitle= props => <StyledTitle/>
-const HomeDesc = props => <StyledDesc/>
-const HomeButton = props => <StyledButton/>
-const HomeImage = props => <StyledImage/>
-
-
 const StyledImage = styled.img`
   width: 600px;
   margin-top: 5%;
@@ -34,6 +25,7 @@ const StyledContent = styled.div`
   display: flex;
   justify-content: left;
   flex-direction: row;
+  font-family: 'Raleway', sans-serif;
 `;
 
 const StyledLeft = styled.div`
@@ -52,6 +44,7 @@ const StyledTitle = styled.span`
   font-weight: 400;
   display: flex;
   text-align: center;
+  font-weight: 700;
 
 `;
 
@@ -86,9 +79,7 @@ const StyledButton = styled.a`
 
 const Home = () => {
   return (
-    // <Container alignContent="center">
-    //   <H2>Hello world</H2>
-    // </Container>
+   
     <div>
       <StyledContent>
 

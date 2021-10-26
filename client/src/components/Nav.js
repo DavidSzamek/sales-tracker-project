@@ -10,6 +10,8 @@ import Img from '../assets/logo2.png';
 const Header = styled.header`
 	// padding: 20px;
 	background-color: ${color.primary};
+	font-family: 'Raleway', sans-serif;
+	font-weight: 500;
 `;
 
 const StyledNav = styled.nav`
@@ -43,10 +45,19 @@ const NavigationItem = styled.li`
 	}
 `;
 
+const StyledImage = styled.img`
+	display: inline;
+`;
+
 function AuthNav() {
 	if (Auth.loggedIn()) {
 		return (
 			<NavigationList float="right">
+				<NavigationItem>
+				<Link to="/dashboard">
+						Dashboard
+					</Link>
+				</NavigationItem>
 				<NavigationItem>
 					{/* this is not using the Link component to logout or user and then refresh the application to the start */}
 					<a href="/" onClick={() => Auth.logout()}>
@@ -80,7 +91,7 @@ function Nav() {
 			<NavigationList>
 				<NavigationItem>
 					<Link to="/">
-						Home
+						<StyledImage src={ Img } />
 					</Link>
 				</NavigationItem>
 			</NavigationList>
