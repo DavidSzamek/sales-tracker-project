@@ -1,51 +1,45 @@
 import React from "react";
 import styled from "styled-components";
 import BgImg from '../assets/hero2.png';
-import BkImg from '../assets/background.png'
+
 
 import { Container } from "../components/Container";
 import { H2 } from '../components/Text';
 
 const StyledImage = styled.img`
-  width: 600px;
-  margin-top: 5%;
-  margin-left: 6%;
-  margin-right: 10%;
-  display: flex;
+  width: 50vw;
+  margin-right: 5%;
+  margin-left: 5%;
 `;
 
-const StyledSection = styled.section`
-    background-image: url(${BkImg});
-    display: block;
-    background-repeat: no-repeat;
-    background-size: contain;
-`;
+// const StyledSection = styled.section`
+//     background-image: url(${BkImg});
+//     display: block;
+//     background-repeat: no-repeat;
+//     background-size: contain;
+// `;
 
 const StyledContent = styled.div`
   display: flex;
   justify-content: left;
   flex-direction: row;
   font-family: 'Raleway', sans-serif;
+  height: calc(100vh - 70px);
 `;
 
 const StyledLeft = styled.div`
-  margin-top: 7%;
-  margin-left: 10%;
-  margin-right: 10%;
-  width: 50%;
+  margin-left: 5%;
+  width: 40vw;
   display: flex;
   justify-content: center;
   flex-direction: column;
 `;
 
 const StyledTitle = styled.span`
-  font-size: 55px;
+  font-size: 45px;
   color: black;
-  font-weight: 400;
-  display: flex;
   text-align: center;
   font-weight: 700;
-
 `;
 
 const StyledDesc = styled.span`
@@ -54,7 +48,6 @@ const StyledDesc = styled.span`
   color: black;
   line-height: 30px;
   margin-top: 58px;
-  display: flex;
   text-align: justify;
 `;
 
@@ -63,12 +56,12 @@ const StyledButton = styled.a`
   align-content; center;
   border-radius: 18px;
   margin-top: 58px;
-  margin-left: 30px;
-  margin-right: 30px;
+  margin-left: 60px;
+  margin-right: 60px;
   // width: 420px;
-  height: 71px;
-  line-height: 71px;
-  font-size: 22px;
+  height: 60px;
+  line-height: 60px;
+  font-size: 20px;
   text-align: center;
   color: #fff;
   cursor: pointer;
@@ -84,13 +77,13 @@ const Home = () => {
       <StyledContent>
 
         <StyledLeft>
-  
+
           <StyledTitle>
-              Data Analytics for the FMCG Industry!
+              Forecasting and Data Analytics for the FMCG Industry!
           </StyledTitle>
 
           <StyledDesc>
-              Gemini’s cutting edge forecasting tool allows users to capture their historical sales pipeline and quickly analyse the data over any period of time. Gemini visualises the data, so that it’s easy and intuitive to understand and, will help identify where you have gaps, roadblocks, and potential wins. 
+              Gemini’s cutting edge forecasting tool allows users to capture their historical sales pipeline and quickly analyse the data over any period of time. Gemini visualises the data, so that it’s easy and intuitive to understand and, will help identify where you have gaps, roadblocks, and potential wins within the FMCG Industry. 
           </StyledDesc>
        
           <StyledButton>

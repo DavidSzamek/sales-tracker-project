@@ -36,7 +36,7 @@ const NavigationItem = styled.li`
 	a {
 		color: ${color.textDark};
 		text-decoration: none;
-		font-size: 1.6rem;
+		font-size: 1.8rem;
 	}
 
 	&:hover {
@@ -46,7 +46,7 @@ const NavigationItem = styled.li`
 `;
 
 const StyledImage = styled.img`
-	display: inline;
+	height: 30px;
 `;
 
 function AuthNav() {
