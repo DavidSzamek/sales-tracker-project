@@ -7,9 +7,8 @@ import { Container } from "../components/Container";
 import { H2 } from '../components/Text';
 
 const StyledImage = styled.img`
-  width: 50vw;
-  margin-right: 5%;
-  margin-left: 5%;
+  width: 50%;
+  margin: 5%;
 `;
 
 // const StyledSection = styled.section`
