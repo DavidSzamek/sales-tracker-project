@@ -10,6 +10,14 @@ import {
   HourglassEmpty,
 } from "@mui/icons-material";
 
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link,
+  useRouteMatch,
+} from "react-router-dom";
+
 // const StyledContent = styled.div`
 //   display: flex;
 //   font-family: 'Raleway', sans-serif;
@@ -43,7 +51,6 @@ const StyledSideList = styled.ul`
   font-size: 1.6rem;
   list-style: none;
   padding: 5px;
-  
 `;
 
 const StyledSideListItem = styled.li`
@@ -53,9 +60,10 @@ const StyledSideListItem = styled.li`
   align-items: center;
   border-radius: 10px;
   
+  
 
   a {
-    
+    text-decoration: none;
   } 
 
   &:hover {
@@ -80,8 +88,10 @@ const Sidebar = () => {
     <StyledSideList>
 
       <StyledSideListItem>
-        <LineStyle />
-        Home
+        <Link to="/dashboard">
+          <LineStyle />
+          Home
+          </Link>
       </StyledSideListItem>
 
       <StyledSideListItem>
@@ -108,9 +118,12 @@ const Sidebar = () => {
     <StyledSideList>
 
       <StyledSideListItem>
+        <Link to="/dashboard/products">
         <ShoppingCart />
-        Products
+						Products
+        </Link>
       </StyledSideListItem>
+      
 
       <StyledSideListItem>
         <CalendarToday />

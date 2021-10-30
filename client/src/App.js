@@ -15,6 +15,7 @@ import Signup from './pages/Signup';
 import Nav from './components/Nav';
 import Dashboard from './pages/Dashboard';
 import { StoreProvider } from './state/GlobalState';
+import ProductList from './components/Dashboard/ProductList';
 
 
 
@@ -47,7 +48,8 @@ function App() {
             <Route exact path="/" component={Home} />
             <Route exact path="/login" component={Login} />
             <Route exact path="/signup" component={Signup} />
-            <Route exact path="/dashboard" component={Dashboard} />
+            <Route path="/dashboard" component={Dashboard} />
+            {/* <Route exact path="/dashboard/products" component={ProductList} /> */}
             <Route component={NoMatch} />
           </Switch>
 

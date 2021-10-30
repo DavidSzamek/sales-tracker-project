@@ -24,3 +24,21 @@ export const testData = [
       "Units": 6000,
     },
   ];
+
+
+  export const productRows = [
+    { 
+        id: 1,
+        productName: 'Green Coast Vanilla Sunscreen',
+        size: '300g',
+        rrp: '$5.00',
+        status: 'Active',
+    },
+    { 
+        id: 2,
+        productName: 'Green Coast Chocolate Sunscreen',
+        size: '300g',
+        rrp: '$5.00',
+        status: 'Active',
+    },
+  ];

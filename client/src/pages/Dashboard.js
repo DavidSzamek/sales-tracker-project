@@ -1,8 +1,19 @@
-import React from "react";
+import React, { Component } from "react";
 import styled from "styled-components";
+
 
 import Sidebar from '../components/Sidebar';
 import DashboardHome from '../components/Dashboard/DashboardHome';
+
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link,
+  useRouteMatch,
+} from "react-router-dom";
+
+import ProductList from "../components/Dashboard/ProductList";
 
 const StyledContent = styled.div`
   display: flex;
@@ -24,8 +35,11 @@ const StyledMain = styled.div`
 `;
 
 const Dashboard = () => {
+
+  const { path, url } = useRouteMatch();
+
     return (
-      <div>
+      <Router>
        <StyledContent>
            
             {/* Sidebar */}
@@ -37,11 +51,19 @@ const Dashboard = () => {
             {/* Main Section */}
 
             <StyledMain>
-                <DashboardHome/>
+                <Switch>
+                  <Route exact path="/dashboard">
+                   <DashboardHome/>
+                  </Route>
+
+                  <Route exact path={`${path}/products`} component={ProductList}/>
+
+                </Switch>
+
             </StyledMain>
 
        </StyledContent>
-      </div>
+      </Router>
     );
   };
   
