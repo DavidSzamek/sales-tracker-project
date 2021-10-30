@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import styled from "styled-components";
 
-
 import Sidebar from '../components/Sidebar';
 import DashboardHome from '../components/Dashboard/DashboardHome';
 
@@ -14,6 +13,8 @@ import {
 } from "react-router-dom";
 
 import ProductList from "../components/Dashboard/ProductList";
+import ProductEdit from "../components/Dashboard/ProductEdit";
+import NewProduct from "../components/Dashboard/NewProduct";
 
 const StyledContent = styled.div`
   display: flex;
@@ -56,7 +57,19 @@ const Dashboard = () => {
                    <DashboardHome/>
                   </Route>
 
-                  <Route exact path={`${path}/products`} component={ProductList}/>
+                  <Route path="/dashboard/products">
+                    <ProductList/>
+                    </Route>
+
+                  {/* <Route exact path={`${path}/products`} component={ProductList}/> */}
+                  
+                  <Route path="/products/:productId">
+                    <ProductEdit/>
+                  </Route>
+
+                  <Route path="/products/newProducts">
+                    <NewProduct/>
+                  </Route>
 
                 </Switch>
 
