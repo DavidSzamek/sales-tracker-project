@@ -8,6 +8,12 @@ import { H2 } from '../components/Text';
 import { Breadcrumb } from '../components/Breadcrumb';
 import { Button } from '../components/Button';
 
+import styled from 'styled-components';
+
+const StyledContainer = styled.div`
+  display: flex;
+`;
+
 function Login(props) {
   const [formState, setFormState] = useState({ email: '', password: '' });
   const [login, { error }] = useMutation(LOGIN);

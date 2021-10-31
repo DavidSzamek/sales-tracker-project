@@ -4,10 +4,11 @@ import { color, shape } from '../styles';
 
 const BreakcrumbWrapper = styled.div`
 	padding: 10px 20px;
-	background: ${color.backgroundMedium};
+	background: #4169E1;
+	border: 1px black solid;
 
 	a {
-		color: ${color.textDark};
+		color: white;
 		text-decoration: none;
 		font-size: 1.4rem;
 

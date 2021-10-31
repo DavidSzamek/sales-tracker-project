@@ -1,14 +1,21 @@
 import React from "react";
 import styled from "styled-components";
 import BgImg from '../assets/hero2.png';
-
+import { Link } from "react-router-dom";
 
 import { Container } from "../components/Container";
 import { H2 } from '../components/Text';
 
 const StyledImage = styled.img`
-  width: 50%;
   margin: 5%;
+  width: 600px;
+  height: 400px;
+
+  @media only screen and (max-width: 1200px) {
+    /* For mobile phones: */
+    
+      display: none;
+    }
 `;
 
 // const StyledSection = styled.section`
@@ -24,13 +31,19 @@ const StyledContent = styled.div`
   flex-direction: row;
   font-family: 'Raleway', sans-serif;
   height: calc(100vh - 70px);
+  margin-left: 50px;
+  margin-right: 50px;
+
+  @media only screen and (max-width: 1200px) {
+    flex-direction: column;
+  }
+
 `;
 
 const StyledLeft = styled.div`
   margin-left: 5%;
-  width: 40vw;
+  margin-top: 5%;
   display: flex;
-  justify-content: center;
   flex-direction: column;
 `;
 
@@ -67,6 +80,12 @@ const StyledButton = styled.a`
   background: linear-gradient(90deg, #000080, #4169E1);
   text-decoration: none;
   box-shadow: 0 15px 14px rgb(0 42 177 / 12%);
+
+  span {
+    color: white;
+    text-decoration: none;
+  }
+
 `;
 
 const Home = () => {
@@ -86,9 +105,11 @@ const Home = () => {
           </StyledDesc>
        
           <StyledButton>
+            <Link to="/signup"> 
               <span>
                 Get started today!
               </span>
+            </Link>
           </StyledButton>
           
         </StyledLeft>

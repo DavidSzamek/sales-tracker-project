@@ -38,7 +38,7 @@ const ProductContainer = styled.div`
 `;
 
 const ProductShow = styled.div`
-    flex: 1;
+    flex: 2;
     padding: 20px;
     -webkit-box-shadow: 0px 0px 15px -10px rgba(0,0,0,0.75);
     box-shadow: 0px 0px 15px -10px rgba(0,0,0,0.75);
@@ -104,6 +104,18 @@ const ProductUpdateForm = styled.span`
 
 const ProductUpdateLeft = styled.div`
 
+    .productUpdateButton{
+        width: 200px;
+        border: none;
+        font-size: 12px;
+        border-radius: 5px;
+        padding: 5px;
+        background-color: #4169E1;
+        color: white;
+        cursor: pointer;
+        margin-left: 2px;
+        margin-top:20px;
+    }
 `;
 
 const ProductUpdateItem = styled.div`
@@ -130,17 +142,7 @@ const ProductUpdateRight = styled.div`
     justify-content: center;
     align-items: center;
 
-    .productUpdateButton{
-        width: 150px;
-        border: none;
-        font-size: 12px;
-        border-radius: 5px;
-        padding: 5px;
-        background-color: #4169E1;
-        color: white;
-        cursor: pointer;
-        margin-right: 70px;
-    }
+   
 `;
 
 
@@ -151,7 +153,7 @@ function ProductEdit() {
             <StyledContainer>
                 <ProductTitleContainer>
                     <ProductTitle>Edit Product</ProductTitle>
-                    <Link to="/newProduct">
+                    <Link to="/dashboard/newProduct">
                     <ProductButton>Create Product</ProductButton>
                     </Link>
                 </ProductTitleContainer>
@@ -252,12 +254,12 @@ function ProductEdit() {
                                     className="productUpdateInput"
                                 ></input>
                             </ProductUpdateItem>
-
+                            <button className="productUpdateButton">Update</button>
                            
                         </ProductUpdateLeft>  
 
                         <ProductUpdateRight>
-                        <button className="productUpdateButton">Update</button>
+                        
                         </ProductUpdateRight>  
                     </ProductUpdateForm>                   
                         

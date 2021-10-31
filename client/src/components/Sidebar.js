@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import NewProduct from "./Dashboard/NewProduct";
 
 import {
   LineStyle,
@@ -60,7 +61,10 @@ const StyledSideListItem = styled.li`
   align-items: center;
   border-radius: 10px;
   
-  
+  .link {
+    text-decoration: none;
+    color: inherit;
+  }
 
   a {
     text-decoration: none;
@@ -75,102 +79,43 @@ const StyledSideListItem = styled.li`
 
 const Sidebar = () => {
     return (
-      <div>
-            <StyledSideWrapper>
+          <StyledSideWrapper>
 
-{/* Top Section */}
-<StyledSideMenu>
+            {/* Top Section */}
+            <StyledSideMenu>
 
-  <StyledSideTitle>
-    Dashboard
-  </StyledSideTitle>
-    
-    <StyledSideList>
+              <StyledSideTitle>
+                Quick Menu
+              </StyledSideTitle>
+                
+                <StyledSideList>
 
-      <StyledSideListItem>
-        <Link to="/dashboard">
-          <LineStyle />
-          Home
-          </Link>
-      </StyledSideListItem>
+                  <StyledSideListItem>
+                    <Link to="/dashboard" className="link">
+                      <LineStyle />
+                      Home
+                      </Link>
+                  </StyledSideListItem>
 
-      <StyledSideListItem>
-        <Timeline />
-        Analytics
-      </StyledSideListItem>
+                  <StyledSideListItem>
+                    <Link to="/dashboard/products" className="link">
+                    <ShoppingCart />
+                        Products
+                    </Link>
+                  </StyledSideListItem>
 
-      <StyledSideListItem>
-        <TrendingUp />
-        Sales
-      </StyledSideListItem>
+                  <StyledSideListItem>
+                  <Link to="/dashboard/newProduct" className="link">
+                    <Timeline />
+                    Add Product
+                  </Link>
+                  </StyledSideListItem>
 
-    </StyledSideList>
+                </StyledSideList>
 
-</StyledSideMenu>
+          </StyledSideMenu>
 
-{/* Middle Section */}
-<StyledSideMenu>
-
-  <StyledSideTitle>
-    Quick Menu
-  </StyledSideTitle>
-    
-    <StyledSideList>
-
-      <StyledSideListItem>
-        <Link to="/dashboard/products">
-        <ShoppingCart />
-						Products
-        </Link>
-      </StyledSideListItem>
-      
-
-      <StyledSideListItem>
-        <CalendarToday />
-        Weeks
-      </StyledSideListItem>
-
-      <StyledSideListItem>
-        <HourglassEmpty />
-        Data
-      </StyledSideListItem>
-
-      <StyledSideListItem>
-        <LineStyle />
-        Home
-      </StyledSideListItem>
-
-    </StyledSideList>
-
- </StyledSideMenu>
-
- {/* Bottom Section */}
-<StyledSideMenu>
-
-  <StyledSideTitle>
-    Settings
-  </StyledSideTitle>
-    
-    <StyledSideList>
-
-      <StyledSideListItem>
-        <Timeline />
-        Add Product
-      </StyledSideListItem>
-
-      <StyledSideListItem>
-        <TrendingUp />
-        Add Week
-      </StyledSideListItem>
-
-    </StyledSideList>
-
-  </StyledSideMenu>
-
-</StyledSideWrapper>
-
-      </div>
-
+      </StyledSideWrapper>
     );
 };
 

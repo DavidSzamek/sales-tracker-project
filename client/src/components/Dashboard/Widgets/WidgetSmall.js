@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 import {Visibility} from "@mui/icons-material";
+import { useState, useEffect } from 'react';
 
 const StyledContainer = styled.div`
 
@@ -64,6 +65,14 @@ const SmallButton = styled.button`
 
 
 function WidgetSmall() {
+
+    // const [ products, setProducts ] = useState([])
+    
+    // useEffect(() => {
+    //     const getProducts = async () => {
+    //         const res = await  
+    // //     }
+    // })
     return (
         <div>
             <StyledContainer>

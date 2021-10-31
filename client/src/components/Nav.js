@@ -32,7 +32,6 @@ const NavigationItem = styled.li`
 	margin: 1rem;
 	padding: 1rem;
 	border-radius: ${shape.borderRadius};
-
 	a {
 		color: ${color.textDark};
 		text-decoration: none;
@@ -40,8 +39,7 @@ const NavigationItem = styled.li`
 	}
 
 	&:hover {
-		background: ${color.backgroundMedium};
-		border-radius: 10px;
+
 	}
 `;
 

@@ -33,6 +33,7 @@ export const testData = [
         size: '300g',
         rrp: '$5.00',
         status: 'Active',
+        promo: '$2.50'
     },
     { 
         id: 2,
@@ -40,5 +41,6 @@ export const testData = [
         size: '300g',
         rrp: '$5.00',
         status: 'Active',
+        promo: '$2.50'
     },
   ];

@@ -15,6 +15,7 @@ import {
 import ProductList from "../components/Dashboard/ProductList";
 import ProductEdit from "../components/Dashboard/ProductEdit";
 import NewProduct from "../components/Dashboard/NewProduct";
+import ProductChart from "../components/Dashboard/ProductChart";
 
 const StyledContent = styled.div`
   display: flex;
@@ -23,10 +24,12 @@ const StyledContent = styled.div`
 
 const StyledSide = styled.div`
   flex: 1;
-  height: calc(100vh - 70px);
+  height: calc(98vh - 70px);
   background-color: #F5F5F5;
   position: sticky;
   top: 70px;
+  margin-left: 20px;
+  border-radius: 10px;
   
 `;
 
@@ -67,8 +70,12 @@ const Dashboard = () => {
                     <ProductEdit/>
                   </Route>
 
-                  <Route path="/products/newProducts">
+                  <Route path="/dashboard/newProduct">
                     <NewProduct/>
+                  </Route>
+
+                  <Route exact path="/products/:productId/chart">
+                    <ProductChart/>
                   </Route>
 
                 </Switch>

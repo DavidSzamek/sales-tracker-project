@@ -7,3 +7,16 @@ export const QUERY_USER = gql`
     }
   }
 `;
+
+
+export const QUERY_GET_ALL = gql`
+{
+   getAll {
+     productName
+     size
+     rrp
+     promo
+     status
+    }
+  }
+`;
