@@ -16,6 +16,7 @@ import ProductList from "../components/Dashboard/ProductList";
 import ProductEdit from "../components/Dashboard/ProductEdit";
 import NewProduct from "../components/Dashboard/NewProduct";
 import ProductChart from "../components/Dashboard/ProductChart";
+import ProductDevelop from "../components/Dashboard/ProductDevelop";
 
 const StyledContent = styled.div`
   display: flex;
@@ -62,6 +63,10 @@ const Dashboard = () => {
 
                   <Route path="/dashboard/products">
                     <ProductList/>
+                    </Route>
+
+                    <Route path="/dashboard/productDevelop">
+                    <ProductDevelop/>
                     </Route>
 
                   {/* <Route exact path={`${path}/products`} component={ProductList}/> */}

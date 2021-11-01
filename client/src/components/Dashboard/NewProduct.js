@@ -1,7 +1,8 @@
-import React, { useState} from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components';
-import axios from 'axios';
-
+import { Link } from 'react-router-dom';
+import { useMutation } from '@apollo/client';
+import { ADD_PRODUCT } from '../../gql/mutations';
 
 const StyledContainer = styled.div`
     flex: 4;
@@ -64,84 +65,100 @@ const NewProductButton = styled.button`
 
 
 
-function NewProduct() {
+function NewProduct(props) {
 
-    const [input, setInput] = useState({
-        productName: '',
-        size: '',
-        sku: '',
-        rrp: '',
-        promo: '',
-        status: '',
-    })
+    const [formState, setFormState] = useState ({ productName: '', size: '', rrp: '', promo:'', status:'' })
+    
+    const [addProduct] = useMutation(ADD_PRODUCT);
 
-    function handleChange(event) {
-        const  {name, value} = event.target;
-
-        setInput(prevInput => {
-            return { 
-                ...prevInput,
-                [name]: value
+    const handleFormSubmit = async (event) => {
+        event.preventDefault();
+        const mutationResponse = await addProduct({
+            variables: {
+                productName: formState.productName,
+                size: formState.size,
+                rrp: formState.rrp,
+                promo: formState.promo,
+                status: formState.status
             }
-        })
+        });
     }
 
-    function handleClick(event) {
-        event.preventDefault();
-
-        const newItem = {
-            productName: input.productName,
-            size: input.size,
-            sku: input.sku,
-            rrp: input.rrp,
-            promo: input.promo,
-            status: input.status,
-        }
-        
-        axios.post('http://localhost:3001/create', newItem)
+    const handleChange = (event) => {
+        const {name, value} = event.target;
+        setFormState({
+            ...formState,
+            [name]: value,
+        })
     }
 
     return (
         <StyledContainer>
             <StyledNewProduct>
                 <NewProductTitle> New Product </NewProductTitle>
-                <NewProductForm>
+                <NewProductForm onSubmit={handleFormSubmit}>
 
                     <NewProductItem>
                         <NewProductLabel> Product Name: </NewProductLabel>
-                        <input onChange={handleChange} name="productName" value ={input.productName} type="text" placeholder="Enter product name here.." />
+                        <input 
+                            type="text"
+                            placeholder="Enter product name here.."
+                            name="productName"
+                            id="productName"
+                            onChange={handleChange}
+                            />
                     </NewProductItem>
 
                     <NewProductItem>
                         <NewProductLabel> Size: </NewProductLabel>
-                        <input onChange={handleChange} name="size" value ={input.size} type="text" placeholder="Enter product size here.." />
+                        <input
+                            type="text"
+                            placeholder="Enter product size here.."
+                            name="sizee"
+                            id="size" 
+                            onChange={handleChange}
+                            />
                     </NewProductItem>
 
-                    <NewProductItem>
+                    {/* <NewProductItem>
                         <NewProductLabel> SKU: </NewProductLabel>
-                        <input onChange={handleChange} name="sku" value ={input.sku} type="text" placeholder="Enter SKU code here.." />
-                    </NewProductItem>
+                        <input type="text" placeholder="Enter SKU code here.." />
+                    </NewProductItem> */}
 
                     <NewProductItem>
                         <NewProductLabel> RRP: </NewProductLabel>
-                        <input onChange={handleChange} name="rrp" value ={input.rrp} type="text"  placeholder="Enter SKU code here.." />
+                        <input
+                            type="text"
+                            placeholder="Enter SKU code here.."
+                            name="rrp"
+                            id="rrp" 
+                            onChange={handleChange}
+                            />
                     </NewProductItem>
 
                     <NewProductItem>
                         <NewProductLabel> Promo: </NewProductLabel>
-                        <input onChange={handleChange} name="promo" value ={input.promo} type="text"  placeholder="Enter SKU code here.." />
+                        <input
+                            type="text"
+                            placeholder="Enter SKU code here.."
+                            name="promo"
+                            id="promo" 
+                            onChange={handleChange}
+                            />
                     </NewProductItem>
 
                     <NewProductItem>
                         <NewProductLabel> Status: </NewProductLabel>
-                        <select onChange={handleChange} name="status" value ={input.status} className="newProductStatus" id="status" name="status">
-                            <option value="Active">Active</option>
-                            <option value="Not Active">Discontinued</option>
-                            <option value="Pending">Pending</option>
-                        </select>
+                        <input
+                            type="text"
+                            placeholder="Active, Pending or Discontinued" 
+                            name="status"
+                            id="status" 
+                            onChange={handleChange}
+                            />
                     </NewProductItem>
 
-                    <NewProductButton onClick={handleClick}> Create </NewProductButton>
+                    <NewProductButton type="submit"> Submit </NewProductButton>
                     
                 </NewProductForm>
 

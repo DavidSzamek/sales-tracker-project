@@ -58,8 +58,11 @@ const WelcomeText = styled.div`
 
 function Welcome() {
 
-const { data } = useQuery(QUERY_USER);
-if ( data ) console.log(data);
+const { loading, data } = useQuery(QUERY_USER);
+
+const userList = data?.user || [];
+
+console.log(userList.email);
 
 return (
     <StyledBackground>
@@ -68,7 +71,7 @@ return (
            <WelcomeContainer>
            
                 <WelcomeText>
-               <h1>Welcome to Gemini Forecasting, (user)</h1>
+               <h1>Welcome to Gemini Forecasting, {userList.email}</h1>
 
                <h2> Click on your dashboard to get started!</h2>
                </WelcomeText>

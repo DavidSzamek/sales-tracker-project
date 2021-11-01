@@ -27,3 +27,26 @@ export const ADD_USER = gql`
     }
   }
 `;
+
+export const ADD_PRODUCT = gql`
+  mutation addProduct(
+  $productName: String!
+  $size: String!
+  $rrp: Float
+  $promo: Float
+  $status: String
+  ) {
+    addProduct(
+      productName: $productName
+      size: $size
+      rrp: $rrp
+      promo: $promo
+      status: $status
+    ) {
+      token
+      user {
+        _id
+      }
+    }
+  }
+`;

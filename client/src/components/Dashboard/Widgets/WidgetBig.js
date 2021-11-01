@@ -76,7 +76,7 @@ function WidgetBig() {
                             <LargeTableTd>
                                 <LargeWidgetDate>27-Oct</LargeWidgetDate>
                             </LargeTableTd>
-                                <LargeWidgetProduct> Green Coast Suncreens  </LargeWidgetProduct>
+                                <LargeWidgetProduct> Green Coast Sunscreen  </LargeWidgetProduct>
                                 <LargeWidgetUnit> 6,000 units </LargeWidgetUnit>
                                 <LargeWidgetPrice> $2.50 </LargeWidgetPrice>
                         </LargeTableTr>
@@ -87,7 +87,7 @@ function WidgetBig() {
                             <LargeTableTd>
                                 <LargeWidgetDate>20-Oct</LargeWidgetDate>
                             </LargeTableTd>
-                                <LargeWidgetProduct> Green Coast Suncreens  </LargeWidgetProduct>
+                                <LargeWidgetProduct> Green Coast Sunscreen  </LargeWidgetProduct>
                                 <LargeWidgetUnit> 1,890 units </LargeWidgetUnit>
                                 <LargeWidgetPrice> $5.00 </LargeWidgetPrice>
                         </LargeTableTr>
@@ -98,7 +98,7 @@ function WidgetBig() {
                             <LargeTableTd>
                                 <LargeWidgetDate>13-Oct</LargeWidgetDate>
                             </LargeTableTd>
-                                <LargeWidgetProduct> Green Coast Suncreens  </LargeWidgetProduct>
+                                <LargeWidgetProduct> Green Coast Sunscreen  </LargeWidgetProduct>
                                 <LargeWidgetUnit> 2,890 units </LargeWidgetUnit>
                                 <LargeWidgetPrice> $5.00 </LargeWidgetPrice>
                         </LargeTableTr>
@@ -109,7 +109,7 @@ function WidgetBig() {
                             <LargeTableTd>
                                 <LargeWidgetDate>06-Oct</LargeWidgetDate>
                             </LargeTableTd>
-                                <LargeWidgetProduct> Green Coast Suncreens  </LargeWidgetProduct>
+                                <LargeWidgetProduct> Green Coast Sunscreen  </LargeWidgetProduct>
                                 <LargeWidgetUnit> 2,000 units </LargeWidgetUnit>
                                 <LargeWidgetPrice> $5.00 </LargeWidgetPrice>
                         </LargeTableTr>

@@ -4,6 +4,8 @@ import { DataGrid } from '@mui/x-data-grid';
 import { HighlightOff } from '@mui/icons-material';
 import { productRows } from '../../testData';
 import { Link } from 'react-router-dom';
+import { useQuery } from '@apollo/client';
+import { QUERY_GET_ALL } from '../../gql/queries';
 
 import { useEffect, useState } from 'react';
 
@@ -55,29 +57,16 @@ const ProductButton = styled.button`
 
 function ProductList() {
     // Function handles the deletion of the product rows; however, not linked to DB just yet
+    
+    // const { loading, data } = useQuery(QUERY_GET_ALL);
+    // console.log(data);
+    
     const [data,setData] = useState(productRows);
-    console.log(data);
+    
 
     const handleDelete = (id) => {
         setData(data.filter(item=>item.id !== id));
     };
-
-    // const [products, setProducts] = useState([{
-    //     productName: '',
-    //     size: '',
-    //     sku: '',
-    //     rrp: '',
-    //     promo: '',
-    //     status: '',
-    // }]);
-
-    // useEffect(() => { 
-    //     fetch("/products").then (res => {
-    //         if (res.ok) {
-    //             return res.json()
-    //         }
-    //     }).then(jsonRes => setProducts(jsonRes));
-    // })
 
     const columns = [
         { field: 'id', headerName: 'ID', width: 75 },

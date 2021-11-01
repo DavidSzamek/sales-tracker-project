@@ -3,6 +3,9 @@ import styled from 'styled-components';
 
 import {Visibility} from "@mui/icons-material";
 import { useState, useEffect } from 'react';
+import { useQuery } from '@apollo/client';
+import { QUERY_GET_ALL } from '../../../gql/queries';
+
 
 const StyledContainer = styled.div`
 
@@ -37,7 +40,11 @@ const SmallProductName = styled.span`
 `;
 
 const SmallProductCost = styled.span`
-    font-weight: 300;
+ 
+`;
+
+const SmallProductSize = styled.span`
+
 `;
 
 const SmallButton = styled.button`
@@ -66,84 +73,106 @@ const SmallButton = styled.button`
 
 function WidgetSmall() {
 
-    // const [ products, setProducts ] = useState([])
-    
-    // useEffect(() => {
-    //     const getProducts = async () => {
-    //         const res = await  
-    // //     }
-    // })
+    const { loading, data } = useQuery(QUERY_GET_ALL);
+
+    // console.log(data);
+
+    const productData = data?.getAll || [];
+
+    // console.log(productData);
+
     return (
         <div>
-            <StyledContainer>
-                
             <SmallTitle>
                 New Products
             </SmallTitle>
 
             <SmallUl>
 
-                {/* Product 1 */}
-
-                <SmallLi> 
-
-                    <SmallProduct>
-
-                        <SmallProductName> Green Coast Vanilla Sunscreen 300g </SmallProductName>
-
-                        <SmallProductCost> RRP: $5.00 </SmallProductCost>
-
-                    </SmallProduct>
-
-                    <SmallButton>
-                        Display
-                    </SmallButton>
-
+            {productData.map((product, index) => 
+                <SmallLi>
+                <SmallProduct>
+                    <SmallProductName> {product.productName} </SmallProductName>
+                    <br/>
+                    <SmallProductSize> Size: {product.size} </SmallProductSize>
+                    <br/>
+                    <SmallProductCost> RRP: {product.rrp} </SmallProductCost>
+                </SmallProduct>
                 </SmallLi>
-
-                {/* Product 2 */}
-
-                <SmallLi> 
-
-                    <SmallProduct>
-
-                        <SmallProductName> Green Coast Chocolate Sunscreen 300g </SmallProductName>
-
-                        <SmallProductCost> RRP: $5.00 </SmallProductCost>
-
-                    </SmallProduct>
-
-                    <SmallButton>
-                        Display
-                    </SmallButton>
-
-                </SmallLi>
-
-                {/* Product 3 */}
-
-                <SmallLi> 
-
-                    <SmallProduct>
-
-                        <SmallProductName> Green Coast Mango Sunscreen 300g </SmallProductName>
-
-                        <SmallProductCost> RRP: $5.00 </SmallProductCost>
-
-                    </SmallProduct>
-
-                    <SmallButton>
-                        Display
-                    </SmallButton>
-
-                </SmallLi>
-
+            )}
 
             </SmallUl>
-
-            </StyledContainer>
-            
         </div>
     )
+
+    // return (
+    //         <StyledContainer>
+    
+            // <SmallTitle>
+            //     New Products
+            // </SmallTitle>
+
+    //         <SmallUl>
+
+    //             {/* Product 1 */}
+
+    //             <SmallLi> 
+
+    //                 <SmallProduct>
+
+    //                     <SmallProductName> Green Coast Vanilla Sunscreen 300g </SmallProductName>
+
+    //                     <SmallProductCost> RRP: $5.00 </SmallProductCost>
+
+    //                 </SmallProduct>
+
+    //                 <SmallButton>
+    //                     Display
+    //                 </SmallButton>
+
+    //             </SmallLi>
+
+    //             {/* Product 2 */}
+
+    //             <SmallLi> 
+
+    //                 <SmallProduct>
+
+    //                     <SmallProductName> Green Coast Chocolate Sunscreen 300g </SmallProductName>
+
+    //                     <SmallProductCost> RRP: $5.00 </SmallProductCost>
+
+    //                 </SmallProduct>
+
+    //                 <SmallButton>
+    //                     Display
+    //                 </SmallButton>
+
+    //             </SmallLi>
+
+    //             {/* Product 3 */}
+
+    //             <SmallLi> 
+
+    //                 <SmallProduct>
+
+    //                     <SmallProductName> Green Coast Mango Sunscreen 300g </SmallProductName>
+
+    //                     <SmallProductCost> RRP: $5.00 </SmallProductCost>
+
+    //                 </SmallProduct>
+
+    //                 <SmallButton>
+    //                     Display
+    //                 </SmallButton>
+
+    //             </SmallLi>
+
+
+    //         </SmallUl>
+
+    //         </StyledContainer>
+    // )
 }
 
 export default WidgetSmall;

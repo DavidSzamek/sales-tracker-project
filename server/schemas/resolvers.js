@@ -14,11 +14,11 @@ const resolvers = {
       throw new AuthenticationError('Not logged in');
     },
     getAll: async (parent, args, context) => {
-      return await Product.find();
+      return await Product.find({});
     },
   },
   Mutation: {
-    createProduct: async (parent, args, context) => {
+    createProduct: async (parent, args ) => {
       const { productName, size, rrp, promo, status } = args.post;
       const product = await new Product({ productName, size, rrp, promo, status }).save();
         return product;

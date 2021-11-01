@@ -4,6 +4,8 @@ import { Link } from 'react-router-dom';
 
 import { productRows } from '../../testData';
 import { useState } from 'react';
+import { useQuery } from '@apollo/client';
+import { QUERY_GET_ALL } from '../../gql/queries';
 
 
 const StyledContainer = styled.div`

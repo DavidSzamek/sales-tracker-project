@@ -1,6 +1,8 @@
 import React from "react";
 import styled from "styled-components";
 import NewProduct from "./Dashboard/NewProduct";
+import { useQuery } from '@apollo/client';
+import { QUERY_USER } from '../gql/queries';
 
 import {
   LineStyle,
@@ -46,6 +48,7 @@ const StyledSideTitle = styled.h3`
   font-size: 1.8rem;
   color: black;
   margin-bottom: 5px;
+  font-weight: 600;
 `;
 
 const StyledSideList = styled.ul`
@@ -78,6 +81,11 @@ const StyledSideListItem = styled.li`
 
 
 const Sidebar = () => {
+
+  const { loading, data } = useQuery(QUERY_USER);
+
+  const userList = data?.user || [];
+
     return (
           <StyledSideWrapper>
 
@@ -85,7 +93,7 @@ const Sidebar = () => {
             <StyledSideMenu>
 
               <StyledSideTitle>
-                Quick Menu
+              {userList.email}'s <br/> <br/> Quick Menu
               </StyledSideTitle>
                 
                 <StyledSideList>
@@ -98,9 +106,16 @@ const Sidebar = () => {
                   </StyledSideListItem>
 
                   <StyledSideListItem>
+                    <Link to="/dashboard/productDevelop" className="link">
+                    <ShoppingCart />
+                        Product Develop
+                    </Link>
+                  </StyledSideListItem>
+
+                  <StyledSideListItem>
                     <Link to="/dashboard/products" className="link">
                     <ShoppingCart />
-                        Products
+                        Product Table
                     </Link>
                   </StyledSideListItem>
 
