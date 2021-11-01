@@ -19,7 +19,6 @@ const resolvers = {
   },
   Mutation: {
     addProduct: async (parent, args ) => {
-      // const { productName, size, rrp, promo, status } = args.post;
       const product = await Product.create(args);
         return product;
     },

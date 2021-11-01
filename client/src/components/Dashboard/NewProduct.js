@@ -129,7 +129,7 @@ function NewProduct(props) {
                         <NewProductLabel> RRP: </NewProductLabel>
                         <input
                             type="text"
-                            placeholder="Enter SKU code here.."
+                            placeholder="Enter product RRP.."
                             name="rrp"
                             id="rrp" 
                             onChange={handleChange}
@@ -140,7 +140,7 @@ function NewProduct(props) {
                         <NewProductLabel> Promo: </NewProductLabel>
                         <input
                             type="text"
-                            placeholder="Enter SKU code here.."
+                            placeholder="Enter product promotional price.."
                             name="promo"
                             id="promo" 
                             onChange={handleChange}

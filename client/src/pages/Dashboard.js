@@ -17,6 +17,7 @@ import ProductEdit from "../components/Dashboard/ProductEdit";
 import NewProduct from "../components/Dashboard/NewProduct";
 import ProductChart from "../components/Dashboard/ProductChart";
 import ProductDevelop from "../components/Dashboard/ProductDevelop";
+import NewSales from "../components/Dashboard/NewSales";
 
 const StyledContent = styled.div`
   display: flex;
@@ -77,6 +78,10 @@ const Dashboard = () => {
 
                   <Route path="/dashboard/newProduct">
                     <NewProduct/>
+                  </Route>
+
+                  <Route path="/dashboard/newSales">
+                    <NewSales/>
                   </Route>
 
                   <Route exact path="/products/:productId/chart">

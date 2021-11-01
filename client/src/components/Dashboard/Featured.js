@@ -63,15 +63,15 @@ function Featured() {
                     {/* Info Container */}
                     <StyledContainer>
 
-                        <StyledDetailName> $placeholder </StyledDetailName>
+                        <StyledDetailName> $15,000 </StyledDetailName>
                         
-                        <StyledDetailData> $placerholder </StyledDetailData>
+                        <StyledDetailData> +200% </StyledDetailData>
 
                     </StyledContainer>
 
                     {/* Subtitle */}
                     <StyledSubtitle> 
-                        data placeholder
+                        vs previous week
                     </StyledSubtitle>
 
                 </StyledFeatureItem>
@@ -87,15 +87,15 @@ function Featured() {
                     {/* Info Container */}
                     <StyledContainer>
 
-                        <StyledDetailName> $placeholder </StyledDetailName>
+                        <StyledDetailName> 6,000</StyledDetailName>
                         
-                        <StyledDetailData> $placerholder </StyledDetailData>
+                        <StyledDetailData> +200% </StyledDetailData>
 
                     </StyledContainer>
 
                     {/* Subtitle */}
                     <StyledSubtitle> 
-                        data placeholder
+                        vs previous week
                     </StyledSubtitle>
 
                 </StyledFeatureItem>
@@ -105,21 +105,21 @@ function Featured() {
 
                     {/* Title */}
                     <StyledFeatureTitle>
-                        Cost
+                        Average Cost
                     </StyledFeatureTitle>
 
                     {/* Info Container */}
                     <StyledContainer>
 
-                        <StyledDetailName> $placeholder </StyledDetailName>
+                        <StyledDetailName> $2.50 </StyledDetailName>
                         
-                        <StyledDetailData> $placerholder </StyledDetailData>
+                        <StyledDetailData> -50% </StyledDetailData>
 
                     </StyledContainer>
 
                     {/* Subtitle */}
                     <StyledSubtitle> 
-                        data placeholder
+                        vs previous week
                     </StyledSubtitle>
 
                 </StyledFeatureItem>

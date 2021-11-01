@@ -139,6 +139,13 @@ const Sidebar = () => {
                   </Link>
                   </StyledSideListItem>
 
+                  <StyledSideListItem>
+                  <Link to="/dashboard/newSales" className="link">
+                    <Timeline />
+                    Add Sales
+                  </Link>
+                  </StyledSideListItem>
+
 
                 </StyledSideList>
 

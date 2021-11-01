@@ -195,6 +195,16 @@ function ProductEdit() {
                             <ProductBottomInfoTitle> 1035100 </ProductBottomInfoTitle>
                             </ProductShowInfo>
 
+                            <ProductBottomTitle> Pricing: </ProductBottomTitle>
+
+                            <ProductShowInfo>
+                            <ProductBottomInfoTitle> RRP: $5.00 </ProductBottomInfoTitle>
+                            </ProductShowInfo>
+
+                            <ProductShowInfo>
+                            <ProductBottomInfoTitle> Promo: $2.50 </ProductBottomInfoTitle>
+                            </ProductShowInfo>
+
                             <ProductBottomTitle> Status: </ProductBottomTitle>
                                                    
                             <ProductShowInfo>
