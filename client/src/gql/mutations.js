@@ -31,9 +31,9 @@ export const ADD_USER = gql`
 export const ADD_PRODUCT = gql`
   mutation addProduct(
   $productName: String!
-  $size: String!
-  $rrp: Float
-  $promo: Float
+  $size: String
+  $rrp: String
+  $promo: String
   $status: String
   ) {
     addProduct(
@@ -42,11 +42,10 @@ export const ADD_PRODUCT = gql`
       rrp: $rrp
       promo: $promo
       status: $status
-    ) {
-      token
-      user {
-        _id
-      }
+    ) 
+    {
+      productName
     }
-  }
+    }
+  
 `;

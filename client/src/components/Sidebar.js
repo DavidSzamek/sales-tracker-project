@@ -105,12 +105,12 @@ const Sidebar = () => {
                       </Link>
                   </StyledSideListItem>
 
-                  <StyledSideListItem>
-                    <Link to="/dashboard/productDevelop" className="link">
-                    <ShoppingCart />
-                        Product Develop
-                    </Link>
-                  </StyledSideListItem>
+            
+
+                  <br/>
+                  <StyledSideTitle>
+                   Data
+                  </StyledSideTitle>
 
                   <StyledSideListItem>
                     <Link to="/dashboard/products" className="link">
@@ -120,11 +120,25 @@ const Sidebar = () => {
                   </StyledSideListItem>
 
                   <StyledSideListItem>
+                    <Link to="/dashboard/productDevelop" className="link">
+                    <ShoppingCart />
+                        Product Develop
+                    </Link>
+                  </StyledSideListItem>
+
+                
+                  <br/>
+                  <StyledSideTitle>
+                   User Input
+                  </StyledSideTitle>
+
+                  <StyledSideListItem>
                   <Link to="/dashboard/newProduct" className="link">
                     <Timeline />
                     Add Product
                   </Link>
                   </StyledSideListItem>
+
 
                 </StyledSideList>
 

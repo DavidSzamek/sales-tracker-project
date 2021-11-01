@@ -114,7 +114,7 @@ function NewProduct(props) {
                         <input
                             type="text"
                             placeholder="Enter product size here.."
-                            name="sizee"
+                            name="size"
                             id="size" 
                             onChange={handleChange}
                             />

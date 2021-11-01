@@ -79,7 +79,7 @@ function WidgetSmall() {
 
     const productData = data?.getAll || [];
 
-    // console.log(productData);
+    console.log(productData);
 
     return (
         <div>
@@ -96,7 +96,7 @@ function WidgetSmall() {
                     <br/>
                     <SmallProductSize> Size: {product.size} </SmallProductSize>
                     <br/>
-                    <SmallProductCost> RRP: {product.rrp} </SmallProductCost>
+                    <SmallProductCost> RRP: ${product.rrp} </SmallProductCost>
                 </SmallProduct>
                 </SmallLi>
             )}

@@ -18,9 +18,9 @@ const resolvers = {
     },
   },
   Mutation: {
-    createProduct: async (parent, args ) => {
-      const { productName, size, rrp, promo, status } = args.post;
-      const product = await new Product({ productName, size, rrp, promo, status }).save();
+    addProduct: async (parent, args ) => {
+      // const { productName, size, rrp, promo, status } = args.post;
+      const product = await Product.create(args);
         return product;
     },
      updateProduct: async (parent, args, context) => {

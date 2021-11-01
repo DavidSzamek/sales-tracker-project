@@ -6,8 +6,8 @@ const typeDefs = gql`
     _id: ID
     productName: String
     size: String
-    rrp: Float
-    promo: Float
+    rrp: String
+    promo: String
     status: String
   }
 
@@ -38,7 +38,7 @@ const typeDefs = gql`
     addUser(email: String!, password: String!): Auth
     updateUser(email: String, password: String): User
     login(email: String!, password: String!): Auth
-    addProduct(productName: String, size: String, rrp: Float, promo: Float, status: String): Product
+    addProduct(productName: String, size: String, rrp: String, promo: String, status: String): Product
     createProduct(post:ProductInput): Product
     updateProduct(id:String,post:ProductInput): Product
     deleteProduct(id:String): String
