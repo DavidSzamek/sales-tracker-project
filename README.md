@@ -4,10 +4,12 @@ Gemini’s cutting edge forecasting tool allows users to capture their historica
 
 ## User Story 
 
-* AS A sales forecaster
+```
+AS A sales executive
 I NEED a tool that is able to quickly capture and visualise sales data.
 IT NEEDS to be easy to update and maintain
 SO THAT I can identify where we might have gaps, roadblocks or sales opportunities. 
+```
 
 
 ## Status
